@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
 const POSTS_QUERY = gql`
-  {
+  query postsQuery{
     posts {
       id
       title
