@@ -60,7 +60,7 @@ const graphql = new ApolloServer({
 const app = express();
 app.use(cookieParser());
 app.use(
-  morgan(function(tokens, req, res) {
+  morgan(function (tokens, req, res) {
     return [
       tokens.method(req, res),
       tokens.url(req, res),
@@ -73,7 +73,7 @@ app.use(
     ].join(" ");
   })
 );
-graphql.applyMiddleware({ app, path: "/" });
+graphql.applyMiddleware({ app });
 const server = http.createServer(app);
 graphql.installSubscriptionHandlers(server);
 
