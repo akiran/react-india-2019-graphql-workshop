@@ -4,11 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec 'node -r esm' --watch '*.js' ./src/server.js"
+    "server": "nodemon --exec 'node -r esm' --watch '*.js' ./server/server.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.2",
     "apollo-server": "^2.4.8",
     "apollo-server-express": "^2.4.8",
     "bcrypt": "^3.0.5",
@@ -24,7 +31,6 @@
     "simple-json-db": "^1.2.1"
   },
   "devDependencies": {
-    "babel-eslint": "9.x",
     "eslint": "5.x",
     "eslint-config-react-app": "^3.0.8",
     "eslint-plugin-flowtype": "2.x",
@@ -32,5 +38,20 @@
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": "7.x",
     "nodemon": "^1.18.10"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
