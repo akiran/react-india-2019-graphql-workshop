@@ -27,6 +27,6 @@ export default function Posts() {
   console.log("posts", loading, error, data)
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
-  return null
+  return <div>{data.onNewPost.title}</div>
 }
 

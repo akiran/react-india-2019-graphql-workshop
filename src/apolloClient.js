@@ -15,10 +15,7 @@ const wsLink = new WebSocketLink(wsClient)
 
 const consoleLink = new ApolloLink((operation, forward) => {
   console.log(`starting request for ${operation.operationName}`);
-  return forward(operation).map((data) => {
-    console.log(`ending request for ${operation.operationName}`);
-    return data;
-  })
+  return forward(operation)
 })
 
 const networkLink = split(
@@ -32,7 +29,7 @@ const networkLink = split(
 )
 
 const client = new ApolloClient({
-  link: ApolloLink.from([networkLink]),
+  link: ApolloLink.from([consoleLink, networkLink]),
   cache: new InMemoryCache()
 });
 
