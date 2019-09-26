@@ -36,6 +36,31 @@
             "title": "Introduction to React",
             "description": "",
             "author": 2
+        },
+        {
+            "id": 4,
+            "title": "New Post",
+            "author": 1
+        },
+        {
+            "id": 5,
+            "title": "New Post",
+            "author": 1
+        },
+        {
+            "id": 6,
+            "title": "New Post",
+            "author": 1
+        },
+        {
+            "id": 7,
+            "title": "New Post",
+            "author": 1
+        },
+        {
+            "id": 8,
+            "title": "New Post",
+            "author": 1
         }
     ],
     "comments": [
